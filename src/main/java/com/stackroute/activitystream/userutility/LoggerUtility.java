@@ -17,6 +17,7 @@ public class LoggerUtility
 	 @Before("execution(public * com.stackroute.activitystream.userutility.UserRegistrationController.get*(..))")
 	 public void beforeEveryMethod() 
 	 {
+		 //Better to extract method parameters and log it ( except password)
 	        LOGGER.info("--- Method Executed at ---");
 	 }
 }
