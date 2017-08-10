@@ -42,11 +42,14 @@ public class UserRegistrationController
 		return new ResponseEntity<UserRegistration>(userRegistration,HttpStatus.ACCEPTED);
 	}
 	
+	//What is this method do? What is the meaning of "simpleRestServiceConsuming" ??
 	public UserHome simpleRestServiceConsuming(String circleid)
 	{
 		System.out.println("Service Consuming Successful");
-		
+		//Why this mail id hard coded?
 		String emailid="vinod@gmail.com";
+		
+		//Whye used new key word??
 		UserHome userHome=new UserHome();
 		
 		String circle_wise_message_Url=MSGSERVICE_RESTURL+"getMessagesByCircleId/"+circleid;
@@ -89,6 +92,7 @@ public class UserRegistrationController
 			userRegistration.statusCode="1034";
 			userRegistration.statusDesc="Invalid Login ID and Password";
 		}
+		//You are return null   // UserHome userHome=null;
 		return new ResponseEntity<UserHome>(userHome,HttpStatus.OK);
 	}
 	
@@ -129,6 +133,8 @@ public class UserRegistrationController
 	@GetMapping(value="/getAllUsers")
 	public ResponseEntity<List<UserRegistration>> getAllUsers()
 	{
+		//userRegistrationDAO can rename to userDAO.
+		//This DAO is not only for registration, but also for delete, validate etc.,
 		
 		List<UserRegistration> listUsers=userRegistrationDAO.getAllUser();
 		return new ResponseEntity<List<UserRegistration>>(listUsers,HttpStatus.OK);
