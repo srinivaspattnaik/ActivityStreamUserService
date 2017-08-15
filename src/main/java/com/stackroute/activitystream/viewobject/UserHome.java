@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.stackroute.activitystream.userutility.Message;
-import com.stackroute.activitystream.userutility.UserRegistration;
+import com.stackroute.activitystream.userutility.User;
 
 public class UserHome 
 {
@@ -13,7 +13,7 @@ public class UserHome
 	
 	private List<String> allCircles=new ArrayList<String>();
 	private List<String> myCircles=new ArrayList<String>();
-	private List<UserRegistration> allUsers=new ArrayList<UserRegistration>();
+	private List<User> allUsers=new ArrayList<User>();
 	private List<Message> circleMessages=new ArrayList<Message>();
 	private List<Message> personalMessage=new ArrayList<Message>();
 	
@@ -41,10 +41,10 @@ public class UserHome
 	public void setMyCircles(List<String> myCircles) {
 		this.myCircles = myCircles;
 	}
-	public List<UserRegistration> getAllUsers() {
+	public List<User> getAllUsers() {
 		return allUsers;
 	}
-	public void setAllUsers(List<UserRegistration> allUsers) {
+	public void setAllUsers(List<User> allUsers) {
 		this.allUsers = allUsers;
 	}
 	public List<Message> getCircleMessages() {

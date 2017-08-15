@@ -1,0 +1,555 @@
+6062 [main] INFO  c.s.a.t.UserServiceControllerTest - Starting UserServiceControllerTest on HYD-SDO-SRINIVAS with PID 484 (started by Global.Root in C:\TTT-ActivityStreamMicroservices\UserService)
+6066 [main] INFO  c.s.a.t.UserServiceControllerTest - No active profile set, falling back to default profiles: default
+6250 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1c7696c6: startup date [Sat Aug 12 15:29:16 IST 2017]; root of context hierarchy
+8025 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.2.4.Final
+14724 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a0d4f834] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+18819 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8087 (http)
+18904 [main] INFO  o.a.catalina.core.StandardService - Starting service Tomcat
+18909 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.6
+19597 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+19598 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 13360 ms
+20418 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+20444 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+20446 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+20446 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+20447 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+23393 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+23512 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+24329 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.11.Final}
+24336 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+24343 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+24637 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+25327 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+27743 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+30062 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1c7696c6: startup date [Sat Aug 12 15:29:16 IST 2017]; root of context hierarchy
+30478 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/getTest],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.stackroute.activitystream.userutility.UserController.getTest()
+30481 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/createUser],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.stackroute.activitystream.userutility.User> com.stackroute.activitystream.userutility.UserController.userRegister(com.stackroute.activitystream.userutility.User)
+30482 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/updateUser],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.stackroute.activitystream.userutility.User> com.stackroute.activitystream.userutility.UserController.updateUser(com.stackroute.activitystream.userutility.User)
+30484 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/deleteUser],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.stackroute.activitystream.userutility.User> com.stackroute.activitystream.userutility.UserController.deleteUser(com.stackroute.activitystream.userutility.User)
+30484 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/getAllUsers],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.stackroute.activitystream.userutility.User>> com.stackroute.activitystream.userutility.UserController.getAllUsers()
+30485 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/getUser/{emailid}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.stackroute.activitystream.userutility.User> com.stackroute.activitystream.userutility.UserController.getUser(java.lang.String)
+30486 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/checkLogin],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.stackroute.activitystream.viewobject.UserHome> com.stackroute.activitystream.userutility.UserController.checkLoginCredential(com.stackroute.activitystream.userutility.User)
+30497 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+30498 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+30669 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+30682 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+30915 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+32301 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8087"]
+32387 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler [http-nio-8087]
+32512 [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+32670 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8087 (http)
+32695 [main] INFO  c.s.a.t.UserServiceControllerTest - Started UserServiceControllerTest in 30.096 seconds (JVM running for 34.991)
+32949 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet ''
+32950 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization started
+33031 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization completed in 80 ms
+33705 [main] INFO  c.s.a.userutility.LoggerUtility - --- Method Executed at ---
+33924 [main] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+34856 [Thread-3] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1c7696c6: startup date [Sat Aug 12 15:29:16 IST 2017]; root of context hierarchy
+34870 [Thread-3] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+34871 [Thread-3] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'entityManagerFactory': java.lang.IllegalStateException: EntityManagerFactory is closed
+2991 [main] INFO  c.s.activitystream.UserServiceBoot - Starting UserServiceBoot on HYD-SDO-SRINIVAS with PID 7288 (C:\TTT-ActivityStreamMicroservices\UserService\target\classes started by Global.Root in C:\TTT-ActivityStreamMicroservices\UserService)
+3004 [main] INFO  c.s.activitystream.UserServiceBoot - No active profile set, falling back to default profiles: default
+3253 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4afcd809: startup date [Sat Aug 12 15:34:59 IST 2017]; root of context hierarchy
+4044 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.2.4.Final
+9410 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1a09b92d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+12636 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8087 (http)
+12692 [main] INFO  o.a.catalina.core.StandardService - Starting service Tomcat
+12696 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.6
+13274 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+13275 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 10040 ms
+14003 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+14016 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+14018 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+14019 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+14020 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+16258 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+16329 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+16634 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.11.Final}
+16640 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+16646 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+17344 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+17843 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+19691 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+21472 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4afcd809: startup date [Sat Aug 12 15:34:59 IST 2017]; root of context hierarchy
+21806 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/createUser],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.stackroute.activitystream.userutility.User> com.stackroute.activitystream.userutility.UserController.userRegister(com.stackroute.activitystream.userutility.User)
+21810 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/getTest],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.stackroute.activitystream.userutility.UserController.getTest()
+21811 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/deleteUser],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.stackroute.activitystream.userutility.User> com.stackroute.activitystream.userutility.UserController.deleteUser(com.stackroute.activitystream.userutility.User)
+21811 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/getUser/{emailid}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.stackroute.activitystream.userutility.User> com.stackroute.activitystream.userutility.UserController.getUser(java.lang.String)
+21812 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/updateUser],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.stackroute.activitystream.userutility.User> com.stackroute.activitystream.userutility.UserController.updateUser(com.stackroute.activitystream.userutility.User)
+21813 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/getAllUsers],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.stackroute.activitystream.userutility.User>> com.stackroute.activitystream.userutility.UserController.getAllUsers()
+21814 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/checkLogin],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.stackroute.activitystream.viewobject.UserHome> com.stackroute.activitystream.userutility.UserController.checkLoginCredential(com.stackroute.activitystream.userutility.User)
+21825 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+21827 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+21970 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+21971 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+22136 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23478 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+23556 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8087"]
+23607 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler [http-nio-8087]
+23657 [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+23714 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8087 (http)
+23733 [main] INFO  c.s.activitystream.UserServiceBoot - Started UserServiceBoot in 22.807 seconds (JVM running for 24.757)
+809246 [http-nio-8087-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+809247 [http-nio-8087-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+809349 [http-nio-8087-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 102 ms
+809820 [http-nio-8087-exec-1] INFO  c.s.a.userutility.LoggerUtility - --- Method Executed at ---
+809974 [http-nio-8087-exec-1] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+4082 [main] INFO  c.s.a.t.UserServiceControllerTest - Starting UserServiceControllerTest on HYD-SDO-SRINIVAS with PID 9836 (started by Global.Root in C:\TTT-ActivityStreamMicroservices\UserService)
+4086 [main] INFO  c.s.a.t.UserServiceControllerTest - No active profile set, falling back to default profiles: default
+4200 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@402c4085: startup date [Sat Aug 12 16:05:45 IST 2017]; root of context hierarchy
+4682 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.2.4.Final
+10504 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$14aa8fea] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+13944 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8087 (http)
+14011 [main] INFO  o.a.catalina.core.StandardService - Starting service Tomcat
+14016 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.6
+14506 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14507 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 10320 ms
+15326 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+15340 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+15342 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+15343 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+15344 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+17649 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+17783 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+18519 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.11.Final}
+18525 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+18531 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+18746 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+19253 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+21314 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+23295 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@402c4085: startup date [Sat Aug 12 16:05:45 IST 2017]; root of context hierarchy
+23717 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/getTest],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.stackroute.activitystream.userutility.UserController.getTest()
+23721 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/checkLogin],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.stackroute.activitystream.viewobject.UserHome> com.stackroute.activitystream.userutility.UserController.checkLoginCredential(com.stackroute.activitystream.userutility.User)
+23722 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/createUser],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.stackroute.activitystream.userutility.User> com.stackroute.activitystream.userutility.UserController.userRegister(com.stackroute.activitystream.userutility.User)
+23724 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/updateUser],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.stackroute.activitystream.userutility.User> com.stackroute.activitystream.userutility.UserController.updateUser(com.stackroute.activitystream.userutility.User)
+23725 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/deleteUser],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.stackroute.activitystream.userutility.User> com.stackroute.activitystream.userutility.UserController.deleteUser(com.stackroute.activitystream.userutility.User)
+23726 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/getAllUsers],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.stackroute.activitystream.userutility.User>> com.stackroute.activitystream.userutility.UserController.getAllUsers()
+23727 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/getUser/{emailid}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.stackroute.activitystream.userutility.User> com.stackroute.activitystream.userutility.UserController.getUser(java.lang.String)
+23736 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+23737 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+23892 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23892 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+24067 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+25357 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8087"]
+25414 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler [http-nio-8087]
+25463 [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+25531 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8087 (http)
+25552 [main] INFO  c.s.a.t.UserServiceControllerTest - Started UserServiceControllerTest in 22.921 seconds (JVM running for 26.686)
+25683 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet ''
+25684 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization started
+25769 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization completed in 84 ms
+26278 [main] INFO  c.s.a.userutility.LoggerUtility - --- Method Executed at ---
+26390 [main] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+27255 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet ''
+27256 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization started
+27266 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization completed in 10 ms
+27643 [http-nio-8087-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+27644 [http-nio-8087-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+27653 [http-nio-8087-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 9 ms
+27692 [http-nio-8087-exec-1] INFO  c.s.a.userutility.LoggerUtility - --- Method Executed at ---
+27921 [Thread-3] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@402c4085: startup date [Sat Aug 12 16:05:45 IST 2017]; root of context hierarchy
+27934 [Thread-3] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+27935 [Thread-3] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'entityManagerFactory': java.lang.IllegalStateException: EntityManagerFactory is closed
+4130 [main] INFO  c.s.a.t.UserServiceControllerTest - Starting UserServiceControllerTest on HYD-SDO-SRINIVAS with PID 13252 (started by Global.Root in C:\TTT-ActivityStreamMicroservices\UserService)
+4134 [main] INFO  c.s.a.t.UserServiceControllerTest - No active profile set, falling back to default profiles: default
+4255 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@402c4085: startup date [Sat Aug 12 16:30:07 IST 2017]; root of context hierarchy
+4722 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.2.4.Final
+10791 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1ad45f04] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14513 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8087 (http)
+14585 [main] INFO  o.a.catalina.core.StandardService - Starting service Tomcat
+14590 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.6
+15532 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+15533 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 11295 ms
+16398 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+16411 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+16413 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+16414 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+16414 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+18979 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+19067 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+19900 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.11.Final}
+19906 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+19912 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+20129 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+20618 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+22700 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+24764 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@402c4085: startup date [Sat Aug 12 16:30:07 IST 2017]; root of context hierarchy
+25164 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/checkLogin],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.stackroute.activitystream.viewobject.UserHome> com.stackroute.activitystream.userutility.UserController.checkLoginCredential(com.stackroute.activitystream.userutility.User)
+25169 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/updateUser],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.stackroute.activitystream.userutility.User> com.stackroute.activitystream.userutility.UserController.updateUser(com.stackroute.activitystream.userutility.User)
+25170 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/getUser/{emailid}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.stackroute.activitystream.userutility.User> com.stackroute.activitystream.userutility.UserController.getUser(java.lang.String)
+25171 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/createUser],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.stackroute.activitystream.userutility.User> com.stackroute.activitystream.userutility.UserController.userRegister(com.stackroute.activitystream.userutility.User)
+25172 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/deleteUser],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.stackroute.activitystream.userutility.User> com.stackroute.activitystream.userutility.UserController.deleteUser(com.stackroute.activitystream.userutility.User)
+25174 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/getAllUsers],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.stackroute.activitystream.userutility.User>> com.stackroute.activitystream.userutility.UserController.getAllUsers()
+25183 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+25185 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+25369 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+25370 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+25572 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+26865 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8087"]
+26925 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler [http-nio-8087]
+26984 [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+27046 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8087 (http)
+27064 [main] INFO  c.s.a.t.UserServiceControllerTest - Started UserServiceControllerTest in 24.388 seconds (JVM running for 28.203)
+27200 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet ''
+27200 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization started
+27279 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization completed in 78 ms
+27796 [main] INFO  c.s.a.userutility.LoggerUtility - --- Method Executed at ---
+27912 [main] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+28768 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet ''
+28769 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization started
+28779 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization completed in 10 ms
+29050 [http-nio-8087-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+29050 [http-nio-8087-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+29060 [http-nio-8087-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 9 ms
+29208 [http-nio-8087-exec-1] INFO  c.s.a.userutility.LoggerUtility - --- Method Executed at ---
+29393 [Thread-3] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@402c4085: startup date [Sat Aug 12 16:30:07 IST 2017]; root of context hierarchy
+29404 [Thread-3] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+29405 [Thread-3] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'entityManagerFactory': java.lang.IllegalStateException: EntityManagerFactory is closed
+4223 [main] INFO  c.s.a.t.UserServiceControllerTest - Starting UserServiceControllerTest on HYD-SDO-SRINIVAS with PID 11344 (started by Global.Root in C:\TTT-ActivityStreamMicroservices\UserService)
+4227 [main] INFO  c.s.a.t.UserServiceControllerTest - No active profile set, falling back to default profiles: default
+4331 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@402c4085: startup date [Sat Aug 12 16:35:21 IST 2017]; root of context hierarchy
+4773 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.2.4.Final
+10754 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1ad45f04] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14288 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8087 (http)
+14348 [main] INFO  o.a.catalina.core.StandardService - Starting service Tomcat
+14353 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.6
+14859 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14860 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 10541 ms
+15698 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+15713 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+15715 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+15716 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+15717 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+18142 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+18232 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+19010 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.11.Final}
+19016 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+19022 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+19233 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+19748 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+21766 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+23740 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@402c4085: startup date [Sat Aug 12 16:35:21 IST 2017]; root of context hierarchy
+24131 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/checkLogin],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.stackroute.activitystream.viewobject.UserHome> com.stackroute.activitystream.userutility.UserController.checkLoginCredential(com.stackroute.activitystream.userutility.User)
+24135 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/updateUser],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.stackroute.activitystream.userutility.User> com.stackroute.activitystream.userutility.UserController.updateUser(com.stackroute.activitystream.userutility.User)
+24137 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/deleteUser],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.stackroute.activitystream.userutility.User> com.stackroute.activitystream.userutility.UserController.deleteUser(com.stackroute.activitystream.userutility.User)
+24138 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/getAllUsers],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.stackroute.activitystream.userutility.User>> com.stackroute.activitystream.userutility.UserController.getAllUsers()
+24139 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/getUser/{emailid}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.stackroute.activitystream.userutility.User> com.stackroute.activitystream.userutility.UserController.getUser(java.lang.String)
+24140 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/createUser],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.stackroute.activitystream.userutility.User> com.stackroute.activitystream.userutility.UserController.userRegister(com.stackroute.activitystream.userutility.User)
+24150 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+24152 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+24372 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+24373 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+24580 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+25842 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8087"]
+25916 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler [http-nio-8087]
+25971 [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+26034 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8087 (http)
+26053 [main] INFO  c.s.a.t.UserServiceControllerTest - Started UserServiceControllerTest in 23.312 seconds (JVM running for 27.258)
+26205 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet ''
+26206 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization started
+26285 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization completed in 79 ms
+26793 [main] INFO  c.s.a.userutility.LoggerUtility - --- Method Executed at ---
+26918 [main] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+27840 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet ''
+27841 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization started
+27853 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization completed in 12 ms
+28133 [http-nio-8087-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+28133 [http-nio-8087-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+28145 [http-nio-8087-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 11 ms
+28225 [http-nio-8087-exec-1] INFO  c.s.a.userutility.LoggerUtility - --- Method Executed at ---
+28381 [Thread-3] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@402c4085: startup date [Sat Aug 12 16:35:21 IST 2017]; root of context hierarchy
+28393 [Thread-3] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+28394 [Thread-3] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'entityManagerFactory': java.lang.IllegalStateException: EntityManagerFactory is closed
+4595 [main] INFO  c.s.a.t.UserServiceControllerTest - Starting UserServiceControllerTest on HYD-SDO-SRINIVAS with PID 5520 (started by Global.Root in C:\TTT-ActivityStreamMicroservices\UserService)
+4600 [main] INFO  c.s.a.t.UserServiceControllerTest - No active profile set, falling back to default profiles: default
+4768 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@402c4085: startup date [Sat Aug 12 16:38:25 IST 2017]; root of context hierarchy
+5260 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.2.4.Final
+12179 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1ad45f04] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16008 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8087 (http)
+16087 [main] INFO  o.a.catalina.core.StandardService - Starting service Tomcat
+16091 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.6
+16611 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16612 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 11888 ms
+17459 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+17473 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+17475 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+17476 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+17477 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+19917 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+20023 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+20899 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.11.Final}
+20905 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+20911 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+21142 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+21691 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+23818 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+25890 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@402c4085: startup date [Sat Aug 12 16:38:25 IST 2017]; root of context hierarchy
+26283 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/checkLogin],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.stackroute.activitystream.viewobject.UserHome> com.stackroute.activitystream.userutility.UserController.checkLoginCredential(com.stackroute.activitystream.userutility.User)
+26288 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/getAllUsers],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.stackroute.activitystream.userutility.User>> com.stackroute.activitystream.userutility.UserController.getAllUsers()
+26289 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/getUser/{emailid}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.stackroute.activitystream.userutility.User> com.stackroute.activitystream.userutility.UserController.getUser(java.lang.String)
+26290 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/createUser],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.stackroute.activitystream.userutility.User> com.stackroute.activitystream.userutility.UserController.userRegister(com.stackroute.activitystream.userutility.User)
+26291 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/updateUser],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.stackroute.activitystream.userutility.User> com.stackroute.activitystream.userutility.UserController.updateUser(com.stackroute.activitystream.userutility.User)
+26292 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/deleteUser],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.stackroute.activitystream.userutility.User> com.stackroute.activitystream.userutility.UserController.deleteUser(com.stackroute.activitystream.userutility.User)
+26302 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+26304 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+26473 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+26474 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+26691 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+28053 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8087"]
+28109 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler [http-nio-8087]
+28157 [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+28237 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8087 (http)
+28259 [main] INFO  c.s.a.t.UserServiceControllerTest - Started UserServiceControllerTest in 25.307 seconds (JVM running for 29.5)
+28392 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet ''
+28393 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization started
+28468 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization completed in 74 ms
+28993 [main] INFO  c.s.a.userutility.LoggerUtility - --- Method Executed at ---
+29108 [main] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+30137 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet ''
+30137 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization started
+30149 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization completed in 11 ms
+30490 [http-nio-8087-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+30491 [http-nio-8087-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+30506 [http-nio-8087-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 14 ms
+30604 [http-nio-8087-exec-1] INFO  c.s.a.userutility.LoggerUtility - --- Method Executed at ---
+30793 [Thread-3] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@402c4085: startup date [Sat Aug 12 16:38:25 IST 2017]; root of context hierarchy
+30805 [Thread-3] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+30807 [Thread-3] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'entityManagerFactory': java.lang.IllegalStateException: EntityManagerFactory is closed
+4116 [main] INFO  c.s.a.t.UserServiceControllerTest - Starting UserServiceControllerTest on HYD-SDO-SRINIVAS with PID 10708 (started by Global.Root in C:\TTT-ActivityStreamMicroservices\UserService)
+4119 [main] INFO  c.s.a.t.UserServiceControllerTest - No active profile set, falling back to default profiles: default
+4224 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@402c4085: startup date [Sat Aug 12 17:05:37 IST 2017]; root of context hierarchy
+4728 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.2.4.Final
+10803 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c9dc18f3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14294 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8087 (http)
+14357 [main] INFO  o.a.catalina.core.StandardService - Starting service Tomcat
+14363 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.6
+14859 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14860 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 10653 ms
+15650 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+15665 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+15667 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+15668 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+15668 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+17975 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+18058 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+18843 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.11.Final}
+18849 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+18856 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+19106 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+19623 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+21624 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+23568 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@402c4085: startup date [Sat Aug 12 17:05:37 IST 2017]; root of context hierarchy
+23983 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/checkLogin],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.stackroute.activitystream.viewobject.UserHome> com.stackroute.activitystream.userutility.UserController.checkLoginCredential(com.stackroute.activitystream.userutility.User)
+23987 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/createUser],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.stackroute.activitystream.userutility.User> com.stackroute.activitystream.userutility.UserController.userRegister(com.stackroute.activitystream.userutility.User)
+23988 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/deleteUser],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.stackroute.activitystream.userutility.User> com.stackroute.activitystream.userutility.UserController.deleteUser(com.stackroute.activitystream.userutility.User)
+23989 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/updateUser],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.stackroute.activitystream.userutility.User> com.stackroute.activitystream.userutility.UserController.updateUser(com.stackroute.activitystream.userutility.User)
+23989 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/getUser/{emailid}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.stackroute.activitystream.userutility.User> com.stackroute.activitystream.userutility.UserController.getUser(java.lang.String)
+23990 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/getAllUsers],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.stackroute.activitystream.userutility.User>> com.stackroute.activitystream.userutility.UserController.getAllUsers()
+23997 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+23999 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+24173 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+24174 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+24407 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+25670 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8087"]
+25726 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler [http-nio-8087]
+25785 [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+25854 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8087 (http)
+25875 [main] INFO  c.s.a.t.UserServiceControllerTest - Started UserServiceControllerTest in 23.272 seconds (JVM running for 27.012)
+26005 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet ''
+26006 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization started
+26086 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization completed in 79 ms
+26600 [main] INFO  c.s.a.userutility.LoggerUtility - --- Method Executed at ---
+26707 [main] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+27627 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet ''
+27628 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization started
+27638 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization completed in 10 ms
+27918 [http-nio-8087-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+27919 [http-nio-8087-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+27930 [http-nio-8087-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 10 ms
+28428 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet ''
+28428 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization started
+28441 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization completed in 12 ms
+28488 [http-nio-8087-exec-2] INFO  c.s.a.userutility.LoggerUtility - --- Method Executed at ---
+28592 [Thread-3] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@402c4085: startup date [Sat Aug 12 17:05:37 IST 2017]; root of context hierarchy
+28604 [Thread-3] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+28605 [Thread-3] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'entityManagerFactory': java.lang.IllegalStateException: EntityManagerFactory is closed
+3984 [main] INFO  c.s.a.t.UserServiceControllerTest - Starting UserServiceControllerTest on HYD-SDO-SRINIVAS with PID 9364 (started by Global.Root in C:\TTT-ActivityStreamMicroservices\UserService)
+3988 [main] INFO  c.s.a.t.UserServiceControllerTest - No active profile set, falling back to default profiles: default
+4095 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@402c4085: startup date [Sat Aug 12 17:07:40 IST 2017]; root of context hierarchy
+4603 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.2.4.Final
+10695 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c9dc18f3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14308 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8087 (http)
+14366 [main] INFO  o.a.catalina.core.StandardService - Starting service Tomcat
+14370 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.6
+14876 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14878 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 10795 ms
+15681 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+15695 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+15697 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+15698 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+15698 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+18110 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+18228 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+18979 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.11.Final}
+18985 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+18991 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+19188 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+19706 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+21769 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+23719 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@402c4085: startup date [Sat Aug 12 17:07:40 IST 2017]; root of context hierarchy
+24141 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/createUser],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.stackroute.activitystream.userutility.User> com.stackroute.activitystream.userutility.UserController.userRegister(com.stackroute.activitystream.userutility.User)
+24144 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/updateUser],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.stackroute.activitystream.userutility.User> com.stackroute.activitystream.userutility.UserController.updateUser(com.stackroute.activitystream.userutility.User)
+24146 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/getAllUsers],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.stackroute.activitystream.userutility.User>> com.stackroute.activitystream.userutility.UserController.getAllUsers()
+24147 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/deleteUser],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.stackroute.activitystream.userutility.User> com.stackroute.activitystream.userutility.UserController.deleteUser(com.stackroute.activitystream.userutility.User)
+24148 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/getUser/{emailid}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.stackroute.activitystream.userutility.User> com.stackroute.activitystream.userutility.UserController.getUser(java.lang.String)
+24149 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/checkLogin],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.stackroute.activitystream.viewobject.UserHome> com.stackroute.activitystream.userutility.UserController.checkLoginCredential(com.stackroute.activitystream.userutility.User)
+24157 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+24158 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+24314 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+24315 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+24501 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+25806 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8087"]
+25866 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler [http-nio-8087]
+25917 [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+25993 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8087 (http)
+26009 [main] INFO  c.s.a.t.UserServiceControllerTest - Started UserServiceControllerTest in 23.448 seconds (JVM running for 27.181)
+26130 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet ''
+26131 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization started
+26200 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization completed in 68 ms
+26711 [main] INFO  c.s.a.userutility.LoggerUtility - --- Method Executed at ---
+26824 [main] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+27703 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet ''
+27703 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization started
+27712 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization completed in 8 ms
+27996 [http-nio-8087-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+27996 [http-nio-8087-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+28009 [http-nio-8087-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 12 ms
+28377 [http-nio-8087-exec-1] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1062, SQLState: 23000
+28378 [http-nio-8087-exec-1] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Duplicate entry 'sunitakoul@niit.com' for key 'PRIMARY'
+28384 [http-nio-8087-exec-1] INFO  o.h.e.j.b.i.AbstractBatchImpl - HHH000010: On release of batch it still contained JDBC statements
+28440 [http-nio-8087-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [PRIMARY]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement] with root cause
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'sunitakoul@niit.com' for key 'PRIMARY'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:935)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3970)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3906)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2524)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2677)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2549)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861)
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073)
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009)
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5098)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:204)
+	at org.hibernate.engine.jdbc.batch.internal.NonBatchingBatch.addToBatch(NonBatchingBatch.java:45)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:2897)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3397)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:89)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:582)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:456)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:337)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:39)
+	at org.hibernate.internal.SessionImpl.flush(SessionImpl.java:1282)
+	at org.springframework.orm.hibernate4.SpringSessionSynchronization.beforeCommit(SpringSessionSynchronization.java:104)
+	at org.springframework.transaction.support.TransactionSynchronizationUtils.triggerBeforeCommit(TransactionSynchronizationUtils.java:95)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.triggerBeforeCommit(AbstractPlatformTransactionManager.java:932)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:744)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:730)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:504)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:292)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655)
+	at com.stackroute.activitystream.userutility.UserDAOImpl$$EnhancerBySpringCGLIB$$b0a4c9a7.addUser(<generated>)
+	at com.stackroute.activitystream.userutility.UserController.userRegister(UserController.java:32)
+	at com.stackroute.activitystream.userutility.UserController$$FastClassBySpringCGLIB$$51843793.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:720)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:655)
+	at com.stackroute.activitystream.userutility.UserController$$EnhancerBySpringCGLIB$$4fa9f03.userRegister(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:220)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:116)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:89)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:784)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+28679 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet ''
+28680 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization started
+28692 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization completed in 12 ms
+28745 [http-nio-8087-exec-2] INFO  c.s.a.userutility.LoggerUtility - --- Method Executed at ---
+28870 [Thread-3] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@402c4085: startup date [Sat Aug 12 17:07:40 IST 2017]; root of context hierarchy
+28882 [Thread-3] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+28883 [Thread-3] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'entityManagerFactory': java.lang.IllegalStateException: EntityManagerFactory is closed

@@ -8,8 +8,8 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
-import com.stackroute.activitystream.userutility.UserRegistrationDAO;
-import com.stackroute.activitystream.userutility.UserRegistrationDAOImpl;
+import com.stackroute.activitystream.userutility.UserDAO;
+import com.stackroute.activitystream.userutility.UserDAOImpl;
 
 
 @SpringBootApplication(scanBasePackages={"com.stackroute.activitystream.userutility"})

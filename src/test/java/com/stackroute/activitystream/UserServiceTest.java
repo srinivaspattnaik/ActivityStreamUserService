@@ -9,8 +9,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.stackroute.activitystream.userutility.UserRegistration;
-import com.stackroute.activitystream.userutility.UserRegistrationDAO;
+import com.stackroute.activitystream.userutility.User;
+import com.stackroute.activitystream.userutility.UserDAO;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment=WebEnvironment.RANDOM_PORT,classes =UserServiceBoot.class)
@@ -18,7 +18,7 @@ public class UserServiceTest
 {
 
 	@Autowired
-	UserRegistrationDAO userRegistrationDAO;
+	UserDAO userRegistrationDAO;
 	
 	/*	@Test
 	public void userInsertionTest()
