@@ -27,10 +27,4 @@ public class UserServiceBoot
 		return hibernateEntityManagerFactory.getSessionFactory();
 	}
 	
-	@Bean
-	public RestTemplate getRestTemplate()
-	{
-		return new RestTemplate();
-	}
-	
 }

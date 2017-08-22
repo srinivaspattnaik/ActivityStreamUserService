@@ -1,14 +1,17 @@
 package com.stackroute.activitystream.test;
 
 import static org.junit.Assert.assertTrue;
-//import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
-import static org.springframework.test.web.servlet.setup.MockMvcBuilders.*;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+import java.util.Arrays;
+import java.util.LinkedHashMap;
 
 import org.junit.Before;
 import org.junit.FixMethodOrder;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.MethodSorters;
@@ -20,13 +23,18 @@ import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
+import static org.hamcrest.Matchers.hasSize;
+import static org.hamcrest.core.Is.is;
+import static org.hamcrest.Matchers.containsString;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.stackroute.activitystream.UserServiceBoot;
 import com.stackroute.activitystream.userutility.User;
 
@@ -50,49 +58,77 @@ public class UserServiceControllerTest
 	    this.mockMvc = MockMvcBuilders.webAppContextSetup(this.wac).build();
 	}
 	
+	@Ignore
 	@Test
 	public void testCaseForCreateUser()throws Exception
 	{
-	    //this.mockMvc.perform(post("http://localhost:8087/createUser")).andExpect(status().isAccepted());
-	    //assertEquals("application/json;charset=UTF-8",mvcResult.getResponse().getContentType());
-		
 		User user=new User();
-		user.setEmail_id("sunitakoul@niit.com");
-		user.setPassword("12345678");
-		user.setUsername("Sunita Koul");
-		user.setMobile("9988112233");
+		user.setEmail_id("dimple@gmail.com");
+		user.setPassword("pass@1234");
+		user.setUsername("Dimple Baid");
+		user.setMobile("9998881213");
 		
+		mockMvc.perform(post("/createUser").contentType(MediaType.APPLICATION_JSON).content(asJsonString(user)))
+                .andExpect(status().isCreated())
+                .andExpect(header().string("location", containsString("http://localhost/createUser")));
 		
-		HttpEntity<User> entity = new HttpEntity<User>(user, headers);
-		System.out.println(entity);
-		ResponseEntity<String> response = restTemplate.exchange("http://localhost:8087/createUser",HttpMethod.POST, entity, String.class);
-		String actual = response.getHeaders().get(HttpHeaders.LOCATION).get(0);
+	}
+	@Ignore
+	@Test
+	public void testCaseForUpdateUser()throws Exception
+	{
+		User user=new User();
+		user.setEmail_id("dimple@gmail.com");
+		user.setPassword("pass12345");
+		user.setUsername("Dimple Baid");
+		user.setMobile("9998881213");
+		
+		mockMvc.perform(post("/updateUser").contentType(MediaType.APPLICATION_JSON).content(asJsonString(user)))
+        .andExpect(status().isOk());
+	}
 
-		assertTrue(actual.contains("/createUser"));
-	}
-	
-	
-	/*@Test
-	public void testCaseForAllUserDisplayDataWise()throws Exception
-	{
-		HttpEntity<String> entity = new HttpEntity<String>(null, headers);
-		String expected="{statusCode:null,statusDesc:null,email_id:nikita@gmail.com,password:1234569999,username:Nikita Kumari Pathak,mobile:9998811122}";
-		ResponseEntity<String> response = restTemplate.exchange("http://localhost:8087/getAllUsers/",HttpMethod.GET, entity, String.class);
-		JSONAssert.assertEquals(expected, response.getBody(), false);
-	}*/	
-	
 	@Test
-	public void testCaseForUserDisplayDataWise()throws Exception
+	public void testCaseForDeleteUser()throws Exception
 	{
-		HttpEntity<String> entity = new HttpEntity<String>(null, headers);
-		String expected="{\"statusCode\":null,\"statusDesc\":null,\"email_id\":\"nikita@gmail.com\",\"password\":\"1234569999\",\"username\":\"Nikita Kumari Pathak\",\"mobile\":\"9998811122\"}";
-		ResponseEntity<String> response = restTemplate.exchange("http://localhost:8087/getUser/nikita@gmail.com",HttpMethod.GET, entity, String.class);
-		JSONAssert.assertEquals(expected, response.getBody(), false);
+		User user=new User();
+		user.setEmail_id("dimple@gmail.com");
+		user.setPassword("pass12345");
+		user.setUsername("Dimple Baid");
+		user.setMobile("9998881213");
+		
+		mockMvc.perform(post("/deleteUser").contentType(MediaType.APPLICATION_JSON).content(asJsonString(user)))
+        .andExpect(status().isOk());
 	}
 	
+	@Ignore
 	@Test
-	public void testCaseForAllUserDisplay()throws Exception
+	public void testCaseForGetUser()throws Exception
 	{
-	    this.mockMvc.perform(get("http://localhost:8087/getAllUsers")).andExpect(status().isOk());
+		 this.mockMvc.perform(get("http://localhost:8087/getUser/{emailid}","nikita@gmail.com")).andExpect(status().isOk())
+		 .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
+		 .andExpect(jsonPath("$.email_id", is("nikita@gmail.com")))
+         .andExpect(jsonPath("$.mobile", is("9998811122")));
+		
 	}
+	@Ignore
+	@Test
+	public void testCaseForGetAllUsers()throws Exception
+	{	
+	    this.mockMvc.perform(get("http://localhost:8087/getAllUsers")).andExpect(status().isOk())
+	    .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
+	    .andExpect(jsonPath("$", hasSize(8)))
+	    .andExpect(jsonPath("$[0].email_id", is("nikita@gmail.com")))
+        .andExpect(jsonPath("$[0].mobile", is("9998811122")));
+	}
+	
+	 public static String asJsonString(final Object obj) 
+	 {
+	        try 
+	        {
+	            return new ObjectMapper().writeValueAsString(obj);
+	        } catch (Exception e) 
+	        {
+	            throw new RuntimeException(e);
+	        }
+	    }
 }

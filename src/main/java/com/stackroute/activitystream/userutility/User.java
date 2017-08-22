@@ -14,7 +14,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @Component
 @Entity
 @Table
-public class User extends BaseDomain
+public class User
 {
 	@Id
 	@NotNull

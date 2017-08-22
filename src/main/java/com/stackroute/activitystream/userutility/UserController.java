@@ -9,20 +9,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
-
-import com.stackroute.activitystream.viewobject.UserHome;
 
 
 @RestController
 public class UserController 
 {
-	@Autowired
-	RestTemplate restTemplate;
-	
-	String MSGSERVICE_RESTURL="http://localhost:8089/";
-	String CIRCLESERVICE_RESTURL="http://localhost:8090/";
-	
 	@Autowired
 	UserDAO userDAO;
 	
@@ -31,34 +22,29 @@ public class UserController
 	{
 		if(userDAO.addUser(user))
 		{
-			user.statusCode="1031";
-			user.statusDesc="Successfully Registered";
+			return new ResponseEntity<User>(user,HttpStatus.CREATED);
 		}
 		else
 		{
-			user.statusCode="1032";
-			user.statusDesc="Error happened while Registering.";
+			return new ResponseEntity<User>(user,HttpStatus.NOT_ACCEPTABLE);
 		}
 		
-		return new ResponseEntity<User>(user,HttpStatus.ACCEPTED);
 	}
 	
 	
 	@PostMapping(value="/checkLogin")
-	public ResponseEntity<UserHome> checkLoginCredential(@RequestBody User user)
+	public ResponseEntity<String> checkLoginCredential(@RequestBody User user)
 	{
-		UserHome userHome=null;
-		if(userDAO.validateUser(user))
+		/*if(userDAO.validateUser(user))
 		{
-			user.statusCode="1033";
-			user.statusDesc="Successfully Login";
+			return new ResponseEntity<String>("Successful Login",HttpStatus.OK);
 		}
 		else
 		{
-			user.statusCode="1034";
-			user.statusDesc="Invalid Login ID and Password";
-		}
-		return new ResponseEntity<UserHome>(userHome,HttpStatus.OK);
+			return new ResponseEntity<String>("LoginID and Password Doesn't Match",HttpStatus.NOT_ACCEPTABLE);
+		}*/
+		
+		return new ResponseEntity<String>("Login",HttpStatus.ACCEPTED);
 	}
 	
 	@PostMapping(value="/updateUser")
@@ -67,32 +53,25 @@ public class UserController
 		
 		if(userDAO.updateUser(user))
 		{
-			user.statusCode="1035";
-			user.statusDesc="Successfully Updated";
+			return new ResponseEntity<User>(user,HttpStatus.OK);
 		}
 		else
 		{
-			user.statusCode="1036";
-			user.statusDesc="Error happened While Updated";
+			return new ResponseEntity<User>(user,HttpStatus.NOT_ACCEPTABLE);
 		}
-		return new ResponseEntity<User>(user,HttpStatus.ACCEPTED);
 	}
 	
 	@PostMapping(value="/deleteUser")
 	public ResponseEntity<User> deleteUser(@RequestBody User user)
 	{
-		
 		if(userDAO.deleteUser(user))
 		{
-			user.statusCode="1037";
-			user.statusDesc="Successfully User Deleted";
+			return new ResponseEntity<User>(user,HttpStatus.OK);
 		}
 		else
 		{
-			user.statusCode="1038";
-			user.statusDesc="Error Happened While Deleting";
+			return new ResponseEntity<User>(user,HttpStatus.NOT_ACCEPTABLE);
 		}
-		return new ResponseEntity<User>(user,HttpStatus.ACCEPTED);
 	}
 	
 	@GetMapping(value="/getAllUsers")

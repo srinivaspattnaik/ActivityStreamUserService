@@ -11,7 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 
-@Repository("userRegistrationDAO")
+@Repository("userDAO")
 public class UserDAOImpl implements UserDAO 
 {
 	@Autowired
@@ -40,15 +40,14 @@ public class UserDAOImpl implements UserDAO
 		Query query=sessionFactory.getCurrentSession().createQuery("from User where emailID=:email and password=:passwd");
 		query.setParameter("email",user.getEmail_id());
 		query.setParameter("passwd",user.getPassword());
-		User userRegistration1=(User)query.list().get(0);
-		if(userRegistration1!=null)
+		User tempuser=(User)query.list().get(0);
+		if(tempuser!=null)
 			return true;
 		else
 			return false;
 		}
 		catch(Exception e)
 		{
-			System.out.println(e);
 			return false;
 		}
 	}
@@ -56,9 +55,9 @@ public class UserDAOImpl implements UserDAO
 	public User getUser(String emailID)
 	{
 		Session session=sessionFactory.openSession();
-		User userRegistration=session.get(User.class,emailID);
+		User user=session.get(User.class,emailID);
 		session.close();
-		return userRegistration;
+		return user;
 	}
 	
 	@Transactional
@@ -66,11 +65,18 @@ public class UserDAOImpl implements UserDAO
 	{
 		try
 		{
-		sessionFactory.getCurrentSession().delete(user);
+		Session session=sessionFactory.openSession();
+		session.delete(user);
+		if(session.contains(user))
+		{
+			session.merge(user);
+		}
+		session.close();
 		return true;
 		}
 		catch(Exception e)
 		{
+		System.out.println("Exception Arised:"+e);
 		return false;
 		}
 	}

@@ -1,23 +1,38 @@
 package com.stackroute.activitystream.userutility;
 
-import java.util.List;
+import org.apache.log4j.Logger;
+import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.http.ResponseEntity;
+import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.stereotype.Component;
 
 @Aspect
 @Component
 public class LoggerUtility 
 {
-	 private static final Logger LOGGER = LoggerFactory.getLogger(LoggerUtility.class);
+	 private static final Logger LOGGER = Logger.getLogger(LoggerUtility.class);
 
-	 @Before("execution(public * com.stackroute.activitystream.userutility.UserController.get*(..))")
-	 public void beforeEveryMethod() 
+	 @Before("execution(public * com.stackroute.activitystream.userutility.UserController.*(..))")
+	 public void beforeEveryMethod(JoinPoint joinPoint) 
 	 {
-		 //Better to extract method parameters and log it ( except password)
-	        LOGGER.info("--- Method Executed at ---");
+		 	MethodSignature methodSignature=(MethodSignature)joinPoint.getSignature();
+		 	
+		 	String methodName=methodSignature.getName();
+		 	
+		 	LOGGER.info("--- Method Name:"+methodName+"---------");
+		 	
+		 	String methodParameterNames[]=methodSignature.getParameterNames();
+	       
+	        if(methodParameterNames!=null)
+	        {
+		        LOGGER.info("Parameters:");
+		        for(int i=0;i<methodParameterNames.length;i++)
+		        {
+		        LOGGER.info(methodParameterNames[i]);
+		        }
+	        }
+	        
+	        
 	 }
 }
