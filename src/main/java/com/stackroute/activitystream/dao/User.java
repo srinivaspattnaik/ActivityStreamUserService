@@ -1,4 +1,4 @@
-package com.stackroute.activitystream.userutility;
+package com.stackroute.activitystream.dao;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

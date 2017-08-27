@@ -1,4 +1,4 @@
-package com.stackroute.activitystream.userutility;
+package com.stackroute.activitystream.security;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;

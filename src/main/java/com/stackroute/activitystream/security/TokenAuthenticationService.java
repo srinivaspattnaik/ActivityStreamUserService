@@ -1,4 +1,4 @@
-package com.stackroute.activitystream.userutility;
+package com.stackroute.activitystream.security;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;

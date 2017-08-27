@@ -1,13 +1,14 @@
 package com.stackroute.activitystream.test;
 
-import static org.junit.Assert.assertTrue;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import static org.hamcrest.Matchers.containsString;
+import static org.hamcrest.Matchers.hasSize;
+import static org.hamcrest.core.Is.is;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.header;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-
-import java.util.Arrays;
-import java.util.LinkedHashMap;
 
 import org.junit.Before;
 import org.junit.FixMethodOrder;
@@ -15,28 +16,27 @@ import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.MethodSorters;
-import org.skyscreamer.jsonassert.JSONAssert;
+import org.mockito.InjectMocks;
+import org.mockito.MockitoAnnotations.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
-import org.springframework.boot.test.web.client.TestRestTemplate;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
-import static org.hamcrest.Matchers.hasSize;
-import static org.hamcrest.core.Is.is;
-import static org.hamcrest.Matchers.containsString;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.stackroute.activitystream.UserServiceBoot;
-import com.stackroute.activitystream.userutility.User;
+import com.stackroute.activitystream.controller.UserController;
+import com.stackroute.activitystream.dao.User;
+import com.stackroute.activitystream.dao.UserDAO;
+
+import static org.mockito.Mockito.*;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes = {UserServiceBoot.class})
@@ -49,8 +49,12 @@ public class UserServiceControllerTest
 
 	private MockMvc mockMvc;
 	
-	TestRestTemplate restTemplate = new TestRestTemplate();
-	HttpHeaders headers = new HttpHeaders();
+	@Mock
+	private UserDAO userDAO;
+	
+	@InjectMocks
+	private UserController userController;
+	
 		
 	@Before
 	public void setup() throws Exception 
@@ -86,7 +90,8 @@ public class UserServiceControllerTest
 		mockMvc.perform(post("/updateUser").contentType(MediaType.APPLICATION_JSON).content(asJsonString(user)))
         .andExpect(status().isOk());
 	}
-
+	
+	@Ignore
 	@Test
 	public void testCaseForDeleteUser()throws Exception
 	{
@@ -100,14 +105,22 @@ public class UserServiceControllerTest
         .andExpect(status().isOk());
 	}
 	
-	@Ignore
+	
 	@Test
 	public void testCaseForGetUser()throws Exception
 	{
-		 this.mockMvc.perform(get("http://localhost:8087/getUser/{emailid}","nikita@gmail.com")).andExpect(status().isOk())
+		 User user=new User();
+		 user.setEmail_id("vinu@gmail.com");
+		 user.setMobile("8991112321");
+		 user.setUsername("Vinu Kumar");
+		 user.setPassword("you@12345");
+		 
+		 when(userDAO.getUser("vinu@gmail.com")).thenReturn(user);
+		 
+		 this.mockMvc.perform(get("/getUser/{emailid}","vinu@gmail.com")).andExpect(status().isOk())
 		 .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
-		 .andExpect(jsonPath("$.email_id", is("nikita@gmail.com")))
-         .andExpect(jsonPath("$.mobile", is("9998811122")));
+		 .andExpect(jsonPath("$.email_id", is("vinu@gmail.com")))
+         .andExpect(jsonPath("$.mobile", is("8991112321")));
 		
 	}
 	@Ignore
@@ -126,7 +139,8 @@ public class UserServiceControllerTest
 	        try 
 	        {
 	            return new ObjectMapper().writeValueAsString(obj);
-	        } catch (Exception e) 
+	        } 
+	        catch (Exception e) 
 	        {
 	            throw new RuntimeException(e);
 	        }

@@ -1,5 +1,7 @@
-package com.stackroute.activitystream.userutility;
+package com.stackroute.activitystream.security;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.stackroute.activitystream.dao.User;
+
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;

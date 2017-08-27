@@ -1,4 +1,4 @@
-package com.stackroute.activitystream.userutility;
+package com.stackroute.activitystream.logger;
 
 import org.apache.log4j.Logger;
 import org.aspectj.lang.JoinPoint;
@@ -13,7 +13,7 @@ public class LoggerUtility
 {
 	 private static final Logger LOGGER = Logger.getLogger(LoggerUtility.class);
 
-	 @Before("execution(public * com.stackroute.activitystream.userutility.UserController.*(..))")
+	 @Before("execution(public * com.stackroute.activitystream.controller.UserController.*(..))")
 	 public void beforeEveryMethod(JoinPoint joinPoint) 
 	 {
 		 	MethodSignature methodSignature=(MethodSignature)joinPoint.getSignature();

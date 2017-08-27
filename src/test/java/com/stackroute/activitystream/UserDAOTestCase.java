@@ -12,8 +12,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.stackroute.activitystream.userutility.User;
-import com.stackroute.activitystream.userutility.UserDAO;
+import com.stackroute.activitystream.dao.User;
+import com.stackroute.activitystream.dao.UserDAO;
 
 
 
